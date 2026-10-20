@@ -129,23 +129,19 @@
     border-bottom: 1px solid var(--rule);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0;
+    gap: 1px;
+    background: var(--rule-soft);
   }
-  @media (min-width: 680px) { .band { grid-template-columns: repeat(5, 1fr); } }
+  @media (min-width: 560px) { .band { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 920px) { .band { grid-template-columns: repeat(6, 1fr); } }
   .stat {
-    padding: 14px 16px 15px 0;
-    border-right: 1px solid var(--rule-soft);
+    background: var(--paper);
+    padding: 22px 15px 20px;
   }
-  .stat:last-child { border-right: 0; }
-  @media (max-width: 679px) {
-    .stat:nth-child(2n) { padding-right: 0; border-right: 0; }
-    .stat:nth-child(2n+1) { padding-right: 16px; }
-    .stat { border-bottom: 1px solid var(--rule-soft); }
-    .stat:last-child { border-bottom: 0; }
-  }
+  .stat:first-child { padding-left: 0; }
   .stat .n {
     font-family: "Newsreader", Georgia, serif;
-    font-size: 2.1rem; font-weight: 600; line-height: 1;
+    font-size: 2.05rem; font-weight: 600; line-height: 1.08;
     font-variant-numeric: tabular-nums;
     display: block;
   }
@@ -336,15 +332,16 @@
 <div class="sheet">
 
   <header class="mast">
-    <div class="wire"><b>last30days</b><span>20 Sep to 20 Oct 2026</span><span class="dash"></span><span>95 items · 5 sources</span></div>
+    <div class="wire"><b>last30days</b><span>20 Sep to 20 Oct 2026</span><span class="dash"></span><span>five sources · two passes</span></div>
     <h1>Frontier <em>on&nbsp;Hold</em></h1>
     <p class="standfirst">The month's biggest model story was a model that never shipped, the safety debate moved from thought experiment to incident report, and Europe spent four weeks arguing with itself about whether it had left the race or quietly re-entered it.</p>
 
     <div class="band">
-      <div class="stat"><span class="n">34</span><span class="l">Reddit threads</span><span class="sub">24,516 upvotes · 5,761 comments</span></div>
+      <div class="stat"><span class="n">28</span><span class="l">Reddit threads</span><span class="sub">13,392 upvotes · 3,636 comments</span></div>
       <div class="stat"><span class="n">39</span><span class="l">HN stories</span><span class="sub">3,808 points · 2,374 comments</span></div>
       <div class="stat"><span class="n">13</span><span class="l">GitHub items</span><span class="sub">45 reactions · 85 comments</span></div>
       <div class="stat"><span class="n">6</span><span class="l">X posts</span><span class="sub">1,644 likes · 188 reposts</span></div>
+      <div class="stat"><span class="n">3</span><span class="l">YouTube videos</span><span class="sub">20,464 views</span></div>
       <div class="stat"><span class="n">18</span><span class="l">Web articles</span><span class="sub">supplemental reporting</span></div>
     </div>
   </header>
@@ -373,14 +370,16 @@
       <p>OpenAI has since moved 5 to 10 percent of its compute off new-model development and onto safety work and continuous monitoring, per <a href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">Axios</a>. The community read is considerably less charitable than the press release.</p>
 
       <div class="quote">
-        <p>The fact that they are rushing to release a stronger model despite scrapping the weaker model and justifying it means they underestimated the competition they were gonna get from claude and opus 5.5</p>
+        <p>The fact that they are rushing to release a stronger model despite scrapping the weaker model and justifying it means they underestimated the competition they were gonna get from claude and opus 5.5…</p>
         <span class="attr">u/zxoyan · <a href="https://reddit.com/r/singularity/comments/1x5ljvv/comment/pgnf171/">103 upvotes</a></span>
       </div>
 
       <div class="quote">
-        <p>They underestimated the value of alignment. Anthropic poured more effort into it and now it pays back. Having said that, it's only temporar[y]: the better the models are the more difficult alignment beco[mes]</p>
+        <p>They underestimated the value of alignment. Anthropic poured more effort into it and now it pays back.</p>
         <span class="attr">u/dondiegorivera · <a href="https://reddit.com/r/singularity/comments/1x5ljvv/comment/pgpkitt/">25 upvotes</a></span>
       </div>
+
+      <p>The same commenter adds the caveat that makes it interesting: the advantage is temporary, because the better the models get, the harder alignment becomes.</p>
     </div>
   </article>
 
@@ -396,7 +395,7 @@
 
       <div class="ledger">
         <div class="ledger-row"><span class="d">early Oct</span><span class="t"><b>Aleph Alpha Kolibri</b>, 78B total and 3B active, out of Germany days before Mistral's release</span></div>
-        <div class="ledger-row"><span class="d">06 Oct</span><span class="t"><b>Mistral Large 4</b>, nicknamed "Le Chonk": a 1.05T multimodal mixture-of-experts with roughly 49B active, trained on about 3,800 Grace Blackwell GPUs in Mistral's own European datacentres across 160+ languages, per <a href="https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/">MarkTechPost</a> and <a href="https://www.theregister.com/ai-and-ml/2026/10/06/european-ai-flag-bearer-mistrals-new-open-weights-model-is-le-chonk/5301443">The Register</a></span></div>
+        <div class="ledger-row"><span class="d">06 Oct</span><span class="t"><b>Mistral Large 4</b>, nicknamed "Le Chonk": a 1.05T multimodal mixture-of-experts with roughly 50B active per token (sources report 49B to 52B), trained on about 3,800 Grace Blackwell GPUs in Mistral's own European datacentres across 160+ languages, per <a href="https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/">MarkTechPost</a> and <a href="https://www.theregister.com/ai-and-ml/2026/10/06/european-ai-flag-bearer-mistrals-new-open-weights-model-is-le-chonk/5301443">The Register</a></span></div>
         <div class="ledger-row"><span class="d">07 Oct</span><span class="t"><b>Claude Haiku 5.5</b> for high-volume classification, summaries and live support</span></div>
         <div class="ledger-row"><span class="d">13 Oct</span><span class="t"><b>Gemini 4 Argon</b> opened to paying developers and subscribers</span></div>
         <div class="ledger-row"><span class="d">15 Oct</span><span class="t"><b>Meta open-weight model</b> that runs locally on a Mac, per <a href="https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/">TechCrunch</a></span></div>
@@ -421,7 +420,7 @@
       <p>Hugging Face detected it first. OpenAI disclosed afterwards. That ordering is doing a lot of work in how the safety communities now talk, and <a href="https://www.reddit.com/r/ControlProblem/comments/1x6af8p/ai_safety_is_not_a_corporate_plot/">a thread on r/ControlProblem</a> argues the exact opposite of the usual cynicism, pointing at a company "committing actual felonies (breaking into a 3rd party's IT infrastructure)" as the reason to stop reading safety as regulatory capture.</p>
 
       <div class="quote alert">
-        <p>Waiting for the news that the new model cyberattacked Andorra, Uganda and the Eurovision headquarters in those 30 days of testing. Hire me as Chief Safety Officer or some shit like that and I'll fix t[his]</p>
+        <p>Waiting for the news that the new model cyberattacked Andorra, Uganda and the Eurovision headquarters in those 30 days of testing.</p>
         <span class="attr">u/Present-Chocolate591 · <a href="https://reddit.com/r/singularity/comments/1x5ljvv/comment/pgnkm2q/">28 upvotes</a></span>
       </div>
 
@@ -450,7 +449,7 @@
       </div>
 
       <div class="quote">
-        <p>We will probably do this and people will convince themselves that this is a smart decision "playing to our strengths", but in reality it's just the next step down towards developing country level econ[omy]</p>
+        <p>We will probably do this and people will convince themselves that this is a smart decision "playing to our strengths", but in reality it's just the next step down towards developing country level…</p>
         <span class="attr">u/MagiMas · <a href="https://reddit.com/r/eutech/comments/1wsdkl5/comment/pckiysv/">17 upvotes</a></span>
       </div>
 
@@ -547,7 +546,7 @@
         <li>What Le Chonk and Kolibri shipping as open weights changes for anyone building on European infrastructure</li>
         <li>What the shift to context engineering and eval infrastructure changes about which skills are worth rebuilding first</li>
       </ul>
-      <div class="omitted">Built from two passes. A full-depth run on 20 October covered Reddit, Hacker News, GitHub and YouTube; X was not authenticated at the time. A second, quick pass later the same day added X and Reddit only, which is why the X layer here is six high-engagement posts rather than a deep sweep. Nothing on this page claims coverage a pass did not actually have.</div>
+      <div class="omitted"><b>Coverage.</b> Built from two passes. A full-depth run on 20 October covered Reddit, Hacker News, GitHub and YouTube; X was not authenticated at the time. A second, quick pass later the same day added X, which is why the X layer here is six high-engagement posts rather than a deep sweep. The counts above are from the pass that searched each source, never summed across passes. Nothing on this page claims coverage a pass did not have.<br><br><b>Quotes.</b> Verbatim. An ellipsis marks where the source text was cut off; nothing has been completed, corrected or paraphrased inside quotation marks.</div>
     </div>
     <div>
       <h3>Colophon</h3>
@@ -557,7 +556,7 @@
         <span class="k">sources</span> Reddit, Hacker News, GitHub, YouTube, X<br>
         <span class="k">communities</span> r/LocalLLaMA, r/singularity, r/artificial, r/eutech, r/ControlProblem, r/MachineLearning<br>
         <span class="k">x voices</span> @filipdames, @SebJohnsonUK, @scalevise, @kimmonismus, @AiForSuccess<br>
-        <span class="k">evidence</span> 95 ranked items plus 18 web articles<br>
+        <span class="k">evidence</span> 83 ranked items full-depth, 12 quick pass, 18 web articles<br>
         <span class="k">raw</span> <span class="path">~/Documents/Last30Days/ai-model-updates-…-raw-v3.md</span> and <span class="path">…-raw-v3-x.md</span>
       </div>
     </div>
