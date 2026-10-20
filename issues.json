@@ -1,0 +1,14 @@
+{
+  "publication": "last30days",
+  "tagline": "What Reddit, X, Hacker News, GitHub and YouTube actually said",
+  "issues": [
+    {
+      "slug": "2026-10-frontier-on-hold",
+      "title": "Frontier on Hold",
+      "date": "2026-10-20",
+      "window": "20 Sep to 20 Oct 2026",
+      "topics": "Model updates · AI engineering · AI safety · Europe AI",
+      "summary": "The month's biggest model story was a model that never shipped, the safety debate moved from thought experiment to incident report, and Europe spent four weeks arguing with itself."
+    }
+  ]
+}
