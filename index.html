@@ -159,23 +159,28 @@
     font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase;
     color: var(--ink-faint); margin-bottom: 12px;
   }
-  .toc-list { display: grid; gap: 1px; background: var(--rule-soft); border-block: 1px solid var(--rule-soft); }
-  @media (min-width: 760px) { .toc-list { grid-template-columns: 1fr 1fr; } }
+  .toc-list { border-top: 1px solid var(--rule-soft); }
   .toc-list a {
-    background: var(--paper);
-    display: flex; gap: 12px; align-items: baseline;
-    padding: 11px 4px 11px 0;
+    display: grid;
+    grid-template-columns: 6.8rem minmax(0, 1fr);
+    gap: 16px;
+    align-items: baseline;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--rule-soft);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.97rem;
     color: var(--ink);
   }
   .toc-list a:hover { color: var(--accent); }
   .toc-list a .tag {
     font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
     font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--ink-faint); min-width: 5.6rem; flex-shrink: 0;
+    color: var(--ink-faint);
   }
   .toc-list a .tag.hot { color: var(--alert); }
+  @media (max-width: 460px) {
+    .toc-list a { grid-template-columns: 5.6rem minmax(0, 1fr); gap: 12px; font-size: 0.92rem; }
+  }
 
   /* ---------- dispatch ---------- */
   article.dispatch {
@@ -353,7 +358,7 @@
       <a href="#small"><span class="tag">Models</span><span>Everything else shipped small</span></a>
       <a href="#incident"><span class="tag hot">Safety</span><span>From thought experiment to breach</span></a>
       <a href="#europe"><span class="tag">Europe</span><span>Four weeks arguing with itself</span></a>
-      <a href="#enforcement"><span class="tag hot">Europe</span><span>The AI Act's awkward first case</span></a>
+      <a href="#enforcement"><span class="tag hot">Regulation</span><span>The AI Act's awkward first case</span></a>
       <a href="#craft"><span class="tag">Engineering</span><span>The job description changed</span></a>
     </div>
   </nav>
